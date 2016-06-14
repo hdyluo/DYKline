@@ -1,0 +1,4 @@
+platform :ios,'7.0'
+target 'DYKlineTest' do
+	pod 'Masonry', '~> 0.6.4'
+end

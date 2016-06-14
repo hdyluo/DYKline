@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B05D2A161CFD26AB0082F9B4 /* DYKlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B05D2A151CFD26AB0082F9B4 /* DYKlineModel.m */; };
+		B05D2A1A1CFEC4840082F9B4 /* DYHorizontalLine.m in Sources */ = {isa = PBXBuildFile; fileRef = B05D2A191CFEC4840082F9B4 /* DYHorizontalLine.m */; };
+		B0D09F7B1CFC5C2B008079C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D09F7A1CFC5C2B008079C0 /* main.m */; };
+		B0D09F7E1CFC5C2B008079C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D09F7D1CFC5C2B008079C0 /* AppDelegate.m */; };
+		B0D09F811CFC5C2B008079C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D09F801CFC5C2B008079C0 /* ViewController.m */; };
+		B0D09F841CFC5C2B008079C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D09F821CFC5C2B008079C0 /* Main.storyboard */; };
+		B0D09F861CFC5C2B008079C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0D09F851CFC5C2B008079C0 /* Assets.xcassets */; };
+		B0D09F891CFC5C2B008079C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D09F871CFC5C2B008079C0 /* LaunchScreen.storyboard */; };
+		B0D09F921CFC6284008079C0 /* DYKlineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D09F911CFC6284008079C0 /* DYKlineScrollView.m */; };
+		B0D09F951CFC6291008079C0 /* DYKlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D09F941CFC6291008079C0 /* DYKlineView.m */; };
+		B0D09F981CFC62A7008079C0 /* DYCoordinateView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D09F971CFC62A7008079C0 /* DYCoordinateView.m */; };
+		B0D09F9B1CFC62B5008079C0 /* DYLongPressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D09F9A1CFC62B5008079C0 /* DYLongPressView.m */; };
+		B5459ABB7DCC0048495B2799 /* libPods-DYKlineTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A066D989759FD1CC5C9C11A /* libPods-DYKlineTest.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6A066D989759FD1CC5C9C11A /* libPods-DYKlineTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DYKlineTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B05D2A141CFD26AB0082F9B4 /* DYKlineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYKlineModel.h; sourceTree = "<group>"; };
+		B05D2A151CFD26AB0082F9B4 /* DYKlineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYKlineModel.m; sourceTree = "<group>"; };
+		B05D2A171CFEC29B0082F9B4 /* DYKlineCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYKlineCommon.h; sourceTree = "<group>"; };
+		B05D2A181CFEC4840082F9B4 /* DYHorizontalLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYHorizontalLine.h; sourceTree = "<group>"; };
+		B05D2A191CFEC4840082F9B4 /* DYHorizontalLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYHorizontalLine.m; sourceTree = "<group>"; };
+		B0D09F761CFC5C2B008079C0 /* DYKlineTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYKlineTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0D09F7A1CFC5C2B008079C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B0D09F7C1CFC5C2B008079C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B0D09F7D1CFC5C2B008079C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B0D09F7F1CFC5C2B008079C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B0D09F801CFC5C2B008079C0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B0D09F831CFC5C2B008079C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0D09F851CFC5C2B008079C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0D09F881CFC5C2B008079C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0D09F8A1CFC5C2B008079C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0D09F901CFC6283008079C0 /* DYKlineScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYKlineScrollView.h; sourceTree = "<group>"; };
+		B0D09F911CFC6284008079C0 /* DYKlineScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYKlineScrollView.m; sourceTree = "<group>"; };
+		B0D09F931CFC6291008079C0 /* DYKlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYKlineView.h; sourceTree = "<group>"; };
+		B0D09F941CFC6291008079C0 /* DYKlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYKlineView.m; sourceTree = "<group>"; };
+		B0D09F961CFC62A7008079C0 /* DYCoordinateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYCoordinateView.h; sourceTree = "<group>"; };
+		B0D09F971CFC62A7008079C0 /* DYCoordinateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYCoordinateView.m; sourceTree = "<group>"; };
+		B0D09F991CFC62B5008079C0 /* DYLongPressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYLongPressView.h; sourceTree = "<group>"; };
+		B0D09F9A1CFC62B5008079C0 /* DYLongPressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYLongPressView.m; sourceTree = "<group>"; };
+		D3D43A960E1404F55FF8F592 /* Pods-DYKlineTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYKlineTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYKlineTest/Pods-DYKlineTest.debug.xcconfig"; sourceTree = "<group>"; };
+		DBA16A63BD54DBC03C05B74F /* Pods-DYKlineTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYKlineTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYKlineTest/Pods-DYKlineTest.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0D09F731CFC5C2B008079C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5459ABB7DCC0048495B2799 /* libPods-DYKlineTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27D092D2C5776BBF5675847C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3D43A960E1404F55FF8F592 /* Pods-DYKlineTest.debug.xcconfig */,
+				DBA16A63BD54DBC03C05B74F /* Pods-DYKlineTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0D09F6D1CFC5C2A008079C0 = {
+			isa = PBXGroup;
+			children = (
+				B0D09F781CFC5C2B008079C0 /* DYKlineTest */,
+				B0D09F771CFC5C2B008079C0 /* Products */,
+				27D092D2C5776BBF5675847C /* Pods */,
+				D69806BA2180F97DD2BBC2CD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B0D09F771CFC5C2B008079C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0D09F761CFC5C2B008079C0 /* DYKlineTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0D09F781CFC5C2B008079C0 /* DYKlineTest */ = {
+			isa = PBXGroup;
+			children = (
+				B0D09F7C1CFC5C2B008079C0 /* AppDelegate.h */,
+				B0D09F7D1CFC5C2B008079C0 /* AppDelegate.m */,
+				B0D09F7F1CFC5C2B008079C0 /* ViewController.h */,
+				B0D09F801CFC5C2B008079C0 /* ViewController.m */,
+				B05D2A171CFEC29B0082F9B4 /* DYKlineCommon.h */,
+				B05D2A141CFD26AB0082F9B4 /* DYKlineModel.h */,
+				B05D2A151CFD26AB0082F9B4 /* DYKlineModel.m */,
+				B0D09F901CFC6283008079C0 /* DYKlineScrollView.h */,
+				B0D09F911CFC6284008079C0 /* DYKlineScrollView.m */,
+				B0D09F931CFC6291008079C0 /* DYKlineView.h */,
+				B0D09F941CFC6291008079C0 /* DYKlineView.m */,
+				B0D09F961CFC62A7008079C0 /* DYCoordinateView.h */,
+				B0D09F971CFC62A7008079C0 /* DYCoordinateView.m */,
+				B05D2A181CFEC4840082F9B4 /* DYHorizontalLine.h */,
+				B05D2A191CFEC4840082F9B4 /* DYHorizontalLine.m */,
+				B0D09F991CFC62B5008079C0 /* DYLongPressView.h */,
+				B0D09F9A1CFC62B5008079C0 /* DYLongPressView.m */,
+				B0D09F821CFC5C2B008079C0 /* Main.storyboard */,
+				B0D09F851CFC5C2B008079C0 /* Assets.xcassets */,
+				B0D09F871CFC5C2B008079C0 /* LaunchScreen.storyboard */,
+				B0D09F8A1CFC5C2B008079C0 /* Info.plist */,
+				B0D09F791CFC5C2B008079C0 /* Supporting Files */,
+			);
+			path = DYKlineTest;
+			sourceTree = "<group>";
+		};
+		B0D09F791CFC5C2B008079C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0D09F7A1CFC5C2B008079C0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D69806BA2180F97DD2BBC2CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A066D989759FD1CC5C9C11A /* libPods-DYKlineTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0D09F751CFC5C2B008079C0 /* DYKlineTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0D09F8D1CFC5C2B008079C0 /* Build configuration list for PBXNativeTarget "DYKlineTest" */;
+			buildPhases = (
+				0CFAA3A93253B72FF98D8A82 /* 📦 Check Pods Manifest.lock */,
+				B0D09F721CFC5C2B008079C0 /* Sources */,
+				B0D09F731CFC5C2B008079C0 /* Frameworks */,
+				B0D09F741CFC5C2B008079C0 /* Resources */,
+				A4DC48C521A4C393C4F4BB3B /* 📦 Embed Pods Frameworks */,
+				A1C3ED78F51E516835E072D9 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DYKlineTest;
+			productName = DYKlineTest;
+			productReference = B0D09F761CFC5C2B008079C0 /* DYKlineTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0D09F6E1CFC5C2A008079C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "黄德玉";
+				TargetAttributes = {
+					B0D09F751CFC5C2B008079C0 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = B0D09F711CFC5C2A008079C0 /* Build configuration list for PBXProject "DYKlineTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0D09F6D1CFC5C2A008079C0;
+			productRefGroup = B0D09F771CFC5C2B008079C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0D09F751CFC5C2B008079C0 /* DYKlineTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0D09F741CFC5C2B008079C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0D09F891CFC5C2B008079C0 /* LaunchScreen.storyboard in Resources */,
+				B0D09F861CFC5C2B008079C0 /* Assets.xcassets in Resources */,
+				B0D09F841CFC5C2B008079C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CFAA3A93253B72FF98D8A82 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A1C3ED78F51E516835E072D9 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYKlineTest/Pods-DYKlineTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4DC48C521A4C393C4F4BB3B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYKlineTest/Pods-DYKlineTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0D09F721CFC5C2B008079C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B05D2A1A1CFEC4840082F9B4 /* DYHorizontalLine.m in Sources */,
+				B0D09F921CFC6284008079C0 /* DYKlineScrollView.m in Sources */,
+				B0D09F811CFC5C2B008079C0 /* ViewController.m in Sources */,
+				B05D2A161CFD26AB0082F9B4 /* DYKlineModel.m in Sources */,
+				B0D09F7E1CFC5C2B008079C0 /* AppDelegate.m in Sources */,
+				B0D09F981CFC62A7008079C0 /* DYCoordinateView.m in Sources */,
+				B0D09F9B1CFC62B5008079C0 /* DYLongPressView.m in Sources */,
+				B0D09F951CFC6291008079C0 /* DYKlineView.m in Sources */,
+				B0D09F7B1CFC5C2B008079C0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B0D09F821CFC5C2B008079C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0D09F831CFC5C2B008079C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0D09F871CFC5C2B008079C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0D09F881CFC5C2B008079C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0D09F8B1CFC5C2B008079C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B0D09F8C1CFC5C2B008079C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0D09F8E1CFC5C2B008079C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3D43A960E1404F55FF8F592 /* Pods-DYKlineTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = DYKlineTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nothing.DYKlineTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		B0D09F8F1CFC5C2B008079C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBA16A63BD54DBC03C05B74F /* Pods-DYKlineTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = DYKlineTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nothing.DYKlineTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0D09F711CFC5C2A008079C0 /* Build configuration list for PBXProject "DYKlineTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0D09F8B1CFC5C2B008079C0 /* Debug */,
+				B0D09F8C1CFC5C2B008079C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0D09F8D1CFC5C2B008079C0 /* Build configuration list for PBXNativeTarget "DYKlineTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0D09F8E1CFC5C2B008079C0 /* Debug */,
+				B0D09F8F1CFC5C2B008079C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0D09F6E1CFC5C2A008079C0 /* Project object */;
+}
