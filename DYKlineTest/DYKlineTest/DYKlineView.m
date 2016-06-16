@@ -52,6 +52,7 @@
     }];
     self.labels = [NSMutableArray array];
     self.pointLayers = [NSMutableArray array];
+    
     [CATransaction begin];
     [CATransaction setDisableActions:YES];
     self.sharpLayer.transform = CATransform3DIdentity;
