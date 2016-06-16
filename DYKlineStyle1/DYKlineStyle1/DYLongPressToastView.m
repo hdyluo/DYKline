@@ -29,11 +29,11 @@
 }
 -(void)layoutSubviews{
     [super layoutSubviews];
-    //UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(2, 2, self.frame.size.width - 4, self.frame.size.height - 4) cornerRadius:4];
     self.bgLayer.path = [self creatPath].CGPath;
-    self.dateLabel.frame = CGRectMake(3, 3, self.frame.size.width - 6, 20);
-    self.priceTitleLabel.frame = CGRectMake(3, 25, 45, 20);
-    self.priceLabel.frame = CGRectMake(40, 25, self.frame.size.width - 40, 20);
+    
+    self.dateLabel.frame = CGRectMake(5, 3, self.frame.size.width - 6, 20);
+    self.priceTitleLabel.frame = CGRectMake(5, 25, 45, 20);
+    self.priceLabel.frame = CGRectMake(45, 25, self.frame.size.width - 45, 20);
 }
 -(void)loadWithDate:(NSString *)date price:(NSString *)price{
     self.dateLabel.text = date;
@@ -41,17 +41,17 @@
 }
 -(UIBezierPath *)creatPath{
     UIBezierPath * path = [UIBezierPath bezierPath];
-    [path moveToPoint:CGPointMake(3, 2)];
-    [path addArcWithCenter:CGPointMake(3, 3) radius:1 startAngle:M_PI * 1.5 endAngle:M_PI  clockwise:NO];
-    [path addLineToPoint:CGPointMake(2, self.frame.size.height - 5)];
-    [path addArcWithCenter:CGPointMake(3, self.frame.size.height - 6) radius:1 startAngle:M_PI endAngle:M_PI * 0.5 clockwise:NO];
+    [path moveToPoint:CGPointMake(4, 2)];
+    [path addArcWithCenter:CGPointMake(4, 4) radius:2 startAngle:M_PI * 1.5 endAngle:M_PI  clockwise:NO];
+    [path addLineToPoint:CGPointMake(2, self.frame.size.height - 7)];
+    [path addArcWithCenter:CGPointMake(4, self.frame.size.height - 7) radius:2 startAngle:M_PI endAngle:M_PI * 0.5 clockwise:NO];
     [path addLineToPoint:CGPointMake(self.frame.size.width * 0.5 - 2.5, self.frame.size.height - 5)];
     [path addLineToPoint:CGPointMake(self.frame.size.width * 0.5, self.frame.size.height)];
     [path addLineToPoint:CGPointMake(self.frame.size.width * 0.5 + 2.5, self.frame.size.height - 5)];
-    [path addLineToPoint:CGPointMake(self.frame.size.width - 3, self.frame.size.height - 5)];
-    [path addArcWithCenter:CGPointMake(self.frame.size.width - 3, self.frame.size.height - 6) radius:1 startAngle:M_PI_2 endAngle:0 clockwise:NO];
-    [path addLineToPoint:CGPointMake(self.frame.size.width - 2, 3)];
-    [path addArcWithCenter:CGPointMake(self.frame.size.width - 3, 3) radius:1 startAngle:0 endAngle:-M_PI_2 clockwise:NO];
+    [path addLineToPoint:CGPointMake(self.frame.size.width - 4, self.frame.size.height - 5)];
+    [path addArcWithCenter:CGPointMake(self.frame.size.width - 4, self.frame.size.height - 7) radius:2 startAngle:M_PI_2 endAngle:0 clockwise:NO];
+    [path addLineToPoint:CGPointMake(self.frame.size.width - 2, 4)];
+    [path addArcWithCenter:CGPointMake(self.frame.size.width - 4, 4) radius:2 startAngle:0 endAngle:-M_PI_2 clockwise:NO];
     [path closePath];
     return path;
 }
