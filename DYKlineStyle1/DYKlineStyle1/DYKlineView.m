@@ -41,10 +41,6 @@
 }
 -(void)reset{
     [self.bezierPath removeAllPoints];
-    [CATransaction begin];
-    [CATransaction setDisableActions:YES];
-    self.sharpLayer.transform = CATransform3DIdentity;
-    [CATransaction commit];
     [self.labels enumerateObjectsUsingBlock:^(UILabel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [obj removeFromSuperview];
     }];
@@ -74,17 +70,7 @@
     self.gradientLayer.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     self.gradientLayer.mask = self.sharpLayer;
 }
--(void)updateTranslationWithOffset:(CGFloat)offset{
-    self.lastestOffset = offset;        //最新的偏移量
-    [CATransaction begin];
-    [CATransaction setDisableActions:YES];
-    self.sharpLayer.transform = CATransform3DMakeTranslation(self.pathOffset - offset, 0, 0);
-    [CATransaction commit];
-    [self.labels enumerateObjectsUsingBlock:^(UILabel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        obj.transform = CGAffineTransformMakeTranslation(self.pathOffset-offset,0);
-        obj.transform = CGAffineTransformRotate(obj.transform, - M_PI  / 4);
-    }];
-}
+
 -(void)addLabelsWithPoint:(CGPoint)point andText:(NSString *)text{
     UILabel * label = [[UILabel alloc] init];
     [label setFont:[UIFont systemFontOfSize:13]];

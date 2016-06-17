@@ -13,6 +13,7 @@
 #define JOINT_SPACE 60
 #define MAX_SCALE  1.5    //60 * 1.5 = 90
 #define MIN_SCALE 0.5     //30
+#define KLINE_OFFSET 50
 
 #define TOP_MARGIN 100
 #define BOTTOM_MARGIN 100

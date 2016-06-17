@@ -49,6 +49,7 @@
         _jointSpace = JOINT_SPACE;
         self.maximumZoomScale = MAX_SCALE;
         self.minimumZoomScale = MIN_SCALE;
+       // [self setBouncesZoom:NO];
         self.delegate = self;
     }else{
         _jointSpace = JOINT_SPACE ;
@@ -56,6 +57,7 @@
     self.backgroundColor = [UIColor whiteColor];//for test
     [self addSubview:self.klineView];
     [self addSubview:self.coordinateView];
+    [self addSubview:self.zoomingView];//for test
 }
 /**
  *  初始化数据
@@ -94,7 +96,21 @@
     }
     self.visibleRange = NSMakeRange(beginIdx, length);//可见范围改变后需要重新画图。
 }
-
+#pragma mark - delegate
+- (nullable UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
+    return self.zoomingView;
+}
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(nullable UIView *)view{
+}
+-(void)scrollViewDidZoom:(UIScrollView *)scrollView{
+    self.contentSize = CGSizeMake(self.contentSize.width,0);
+    CGFloat tempCurrentSpace = self.contentSize.width / (_datas.count - 1);//新的间距。
+    self.contentOffset = CGPointMake(self.contentOffset.x, 0);
+    self.jointSpace = tempCurrentSpace;//获取最新的间距,执行setter函数
+    
+}
+-(void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale{
+}
 #pragma mark - 第一次初始化宽高或屏幕旋转
 -(void)_viewPortDidChanged{
     CGFloat tempContentWidth = self.jointSpace * (_datas.count - 1);
@@ -102,7 +118,7 @@
         tempContentWidth = self.viewPortWidth;
     }
     self.contentSize = CGSizeMake(tempContentWidth, self.viewPortHeight);//需要重新计算contentSize
- //   self.zoomingView.frame = CGRectMake(0, 0, self.contentSize.width, self.frame.size.height);//重新计算需要放大缩小的视图的宽高。
+    self.zoomingView.frame = CGRectMake(0, 0, self.contentSize.width, self.frame.size.height);//重新计算需要放大缩小的视图的宽高。
 }
 #pragma mark - 计算可见范围内的最大值，最小值
 -(void)caculateRange{
@@ -136,13 +152,11 @@
 }
 -(void)setJointSpace:(float)jointSpace{
     _jointSpace = jointSpace;
+    [self _caculateXpos];//计算所有数据对应的坐标
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
 }
 -(void)setVisibleRange:(NSRange)visibleRange{
-    if (_visibleRange.length == visibleRange.length && _visibleRange.location == visibleRange.location) {
-        //range没有改变，则只需要计算偏移量就行了
-        [self.klineView updateTranslationWithOffset:self.contentOffset.x];
-        return;
-    }
     _visibleRange = visibleRange;
     [self caculateRange];
     NSArray<DYKlineModel *> * array = [_datas subarrayWithRange:self.visibleRange];
@@ -161,7 +175,8 @@
 -(UIView *)zoomingView{
     if(!_zoomingView){
         _zoomingView = [[UIView alloc] init];
-        _zoomingView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.3];
+        _zoomingView.backgroundColor = [UIColor clearColor];
+        _zoomingView.userInteractionEnabled = NO;
     }
     return _zoomingView;
 }

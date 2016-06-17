@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.models = [[self generateRandomData] mutableCopy];
-    self.klineScrollView  = [[DYKlineScrollView alloc] initWithDatas:self.models InteractiveType:DYKlineInteractiveNone];
+    self.klineScrollView  = [[DYKlineScrollView alloc] initWithDatas:self.models InteractiveType:DYKlineInteractiveNone | DYKlineInteractiveZoom];
     [self.view addSubview:self.klineScrollView];
     [self layout];
 }
@@ -33,7 +33,7 @@
 
 -(NSArray *)generateRandomData{
     NSMutableArray * array = [NSMutableArray array];
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 1000; i++) {
         DYKlineModel * tempModel = [[DYKlineModel alloc] init];
         tempModel.date = [NSString stringWithFormat:@"2016-%d-%d",i,i];
         tempModel.value = arc4random() % 5000 + 2000;

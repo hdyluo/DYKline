@@ -11,5 +11,4 @@
 
 @interface DYKlineView : UIView
 -(void)updatePathWithDatas:(NSArray<DYKlineModel *> *)datas offset:(CGFloat)offset maxValue:(float)maxValue minValue:(float)minValue;
--(void)updateTranslationWithOffset:(CGFloat)offset;
 @end
