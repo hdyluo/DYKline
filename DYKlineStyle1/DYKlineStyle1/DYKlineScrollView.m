@@ -49,10 +49,9 @@
         _jointSpace = JOINT_SPACE;
         self.maximumZoomScale = MAX_SCALE;
         self.minimumZoomScale = MIN_SCALE;
-       // [self setBouncesZoom:NO];
         self.delegate = self;
     }else{
-        _jointSpace = JOINT_SPACE ;
+        _jointSpace = JOINT_SPACE * MIN_SCALE;
     }
     self.backgroundColor = [UIColor whiteColor];//for test
     [self addSubview:self.klineView];
@@ -109,8 +108,6 @@
     self.jointSpace = tempCurrentSpace;//获取最新的间距,执行setter函数
     
 }
--(void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale{
-}
 #pragma mark - 第一次初始化宽高或屏幕旋转
 -(void)_viewPortDidChanged{
     CGFloat tempContentWidth = self.jointSpace * (_datas.count - 1);
@@ -157,6 +154,11 @@
     [self layoutIfNeeded];
 }
 -(void)setVisibleRange:(NSRange)visibleRange{
+    if (_visibleRange.length == visibleRange.length && _visibleRange.location == visibleRange.location && !self.isZooming) { //缩放的时候，不能更新偏移量，否则缩放会抖动的厉害
+        [self.klineView updateTranslationWithOffset:self.contentOffset.x];
+        NSLog(@"有相等的地方");
+        return;
+    }
     _visibleRange = visibleRange;
     [self caculateRange];
     NSArray<DYKlineModel *> * array = [_datas subarrayWithRange:self.visibleRange];
