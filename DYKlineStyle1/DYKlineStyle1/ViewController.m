@@ -33,7 +33,7 @@
 
 -(NSArray *)generateRandomData{
     NSMutableArray * array = [NSMutableArray array];
-    for (int i = 0; i < 1000; i++) {
+    for (int i = 0; i < 7; i++) {
         DYKlineModel * tempModel = [[DYKlineModel alloc] init];
         tempModel.date = [NSString stringWithFormat:@"2016-%d-%d",i,i];
         tempModel.value = arc4random() % 5000 + 2000;

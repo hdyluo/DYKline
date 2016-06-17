@@ -13,7 +13,8 @@
 #define JOINT_SPACE 60
 #define MAX_SCALE  1.5    //60 * 1.5 = 90
 #define MIN_SCALE 0.5     //30
-#define KLINE_OFFSET 50
+#define KLINE_OFFSET 60     //起始点距离X轴的距离
+#define SCROLLCONTENT_SIZE_EXTENT 200   //滚动结束，K线距离最右边的距离
 
 #define TOP_MARGIN 100
 #define BOTTOM_MARGIN 100

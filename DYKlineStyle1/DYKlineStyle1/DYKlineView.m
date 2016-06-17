@@ -59,7 +59,7 @@
     [datas enumerateObjectsUsingBlock:^(DYKlineModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         CGFloat yValue = (maxValue - obj.value) / (maxValue - minValue) * (self.frame.size.height - (TOP_MARGIN + BOTTOM_MARGIN)) + TOP_MARGIN;//映射到指定范围内。
         [self.yValues addObject:[NSNumber numberWithFloat:yValue]];
-        CGPoint startPoint = CGPointMake(obj.xValue - offset, yValue);
+        CGPoint startPoint = CGPointMake(obj.xValue - offset + KLINE_OFFSET, yValue);
         if (idx == 0) {
             [self.bezierPath moveToPoint:startPoint];
         }else{
@@ -135,9 +135,16 @@
 -(void)getCurrentLongPressPointAndDataWithPoint:(CGPoint)point{
     __block CGPoint toPoint = point;
     [self.currentDatas enumerateObjectsUsingBlock:^(DYKlineModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        CGFloat tp = obj.xValue - self.lastestOffset;
+        CGFloat tp = obj.xValue - self.lastestOffset + KLINE_OFFSET;
         if (idx < _currentDatas.count - 1) {
-            CGFloat t1 = _currentDatas[idx + 1].xValue - self.lastestOffset;
+            CGFloat t1 = _currentDatas[idx + 1].xValue - self.lastestOffset + KLINE_OFFSET;
+            if (point.x - tp < 0) {
+                toPoint.x = tp;
+                toPoint.y = [self.yValues[idx] floatValue];
+                _currentLongPressData = self.currentDatas[idx];
+                _currentLongPressPoint = toPoint;
+                * stop = YES;
+            }
             if (point.x - tp >= 0 && t1 - point.x >= 0) {
                 if (point.x - tp < t1 - point.x) {
                     toPoint.x = tp;

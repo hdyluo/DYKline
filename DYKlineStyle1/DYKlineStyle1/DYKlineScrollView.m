@@ -85,9 +85,9 @@
  *  计算当前显示点的范围。
  */
 -(void)_caculateCurrentPoints{
-    NSInteger beginIdx =  self.contentOffset.x / self.jointSpace;
+    NSInteger beginIdx =  self.contentOffset.x / self.jointSpace - 1;
     NSInteger length = self.viewPortWidth / self.jointSpace + 3;
-    if (self.contentOffset.x < 0) {
+    if (self.contentOffset.x < 0 || beginIdx < 0) {
         beginIdx = 0;
     }
     if (length + beginIdx > _datas.count) {
@@ -103,19 +103,27 @@
 }
 -(void)scrollViewDidZoom:(UIScrollView *)scrollView{
     self.contentSize = CGSizeMake(self.contentSize.width,0);
-    CGFloat tempCurrentSpace = self.contentSize.width / (_datas.count - 1);//新的间距。
+    CGFloat tempCurrentSpace = JOINT_SPACE * scrollView.zoomScale;//新的间距。
     self.contentOffset = CGPointMake(self.contentOffset.x, 0);
+    if (self.contentOffset.x < 0) {
+        self.contentOffset = CGPointMake(0,0);
+    }
     self.jointSpace = tempCurrentSpace;//获取最新的间距,执行setter函数
     
 }
 #pragma mark - 第一次初始化宽高或屏幕旋转
 -(void)_viewPortDidChanged{
     CGFloat tempContentWidth = self.jointSpace * (_datas.count - 1);
-    if (tempContentWidth < self.viewPortWidth) {
-        tempContentWidth = self.viewPortWidth;
+    if (tempContentWidth > self.viewPortWidth) {
+         tempContentWidth += SCROLLCONTENT_SIZE_EXTENT;
     }
     self.contentSize = CGSizeMake(tempContentWidth, self.viewPortHeight);//需要重新计算contentSize
     self.zoomingView.frame = CGRectMake(0, 0, self.contentSize.width, self.frame.size.height);//重新计算需要放大缩小的视图的宽高。
+    self.klineView.frame = CGRectMake(self.contentOffset.x, 0, self.frame.size.width, self.frame.size.height);
+    
+    //再次更新可见范围内的数据,如果数据较少时，屏幕旋转，K线会出问题,因为我们不需要屏幕旋转，所以可以把它注释掉
+    //NSArray<DYKlineModel *> * array = [_datas subarrayWithRange:self.visibleRange];
+    //[self.klineView updatePathWithDatas:array offset:self.contentOffset.x maxValue:_maxValue minValue:_minValue];
 }
 #pragma mark - 计算可见范围内的最大值，最小值
 -(void)caculateRange{
@@ -156,7 +164,6 @@
 -(void)setVisibleRange:(NSRange)visibleRange{
     if (_visibleRange.length == visibleRange.length && _visibleRange.location == visibleRange.location && !self.isZooming) { //缩放的时候，不能更新偏移量，否则缩放会抖动的厉害
         [self.klineView updateTranslationWithOffset:self.contentOffset.x];
-        NSLog(@"有相等的地方");
         return;
     }
     _visibleRange = visibleRange;
