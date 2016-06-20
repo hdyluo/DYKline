@@ -10,7 +10,7 @@
 #define DYCommon_h
 
 
-#define JOINT_SPACE 60
+#define JOINT_SPACE 80
 #define MAX_SCALE  1.5    //60 * 1.5 = 90
 #define MIN_SCALE 0.5     //30
 #define KLINE_OFFSET 60     //起始点距离X轴的距离

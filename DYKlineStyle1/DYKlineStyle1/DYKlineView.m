@@ -66,7 +66,7 @@
             [self.bezierPath addLineToPoint:startPoint];
         }
         [self addLabelsWithPoint:startPoint andText:obj.date];
-        UIBezierPath * path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(startPoint.x -3, startPoint.y - 3, 6, 6)];
+        UIBezierPath * path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(startPoint.x - 2.5, startPoint.y - 2.5, 5, 5)];
         [self.bezierPath appendPath:path];
         [self.bezierPath addLineToPoint:startPoint];
     }];
@@ -175,7 +175,7 @@
         _sharpLayer = [CAShapeLayer layer];
         _sharpLayer.strokeColor = [UIColor greenColor].CGColor;
         _sharpLayer.fillColor = [UIColor clearColor].CGColor;
-        _sharpLayer.lineWidth = 3.0;
+        _sharpLayer.lineWidth = 3.3;
         _sharpLayer.lineJoin = kCALineJoinRound;
     }
     return _sharpLayer;
