@@ -13,7 +13,7 @@
 
 #pragma mark - 关联对象
 static char * dyHeaderKey;
--(UIView *)dy_refreshHeaderView{
+-(DYBaseRefreshHeader *)dy_refreshHeaderView{
     return objc_getAssociatedObject(self, dyHeaderKey);
 }
 -(void)setDy_refreshHeaderView:(UIView *)dy_refreshHeaderView{
@@ -27,5 +27,9 @@ static char * dyFooterKey;
 -(void)setDy_refreshFooterView:(UIView *)dy_refreshFooterView{
     [self addSubview:dy_refreshFooterView];
     objc_setAssociatedObject(self, dyFooterKey, dy_refreshFooterView, OBJC_ASSOCIATION_ASSIGN);
+}
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    self.dy_refreshHeaderView.frame = CGRectMake(0, -self.dy_refreshHeaderView.limit, self.frame.size.width, self.dy_refreshHeaderView.limit);
 }
 @end

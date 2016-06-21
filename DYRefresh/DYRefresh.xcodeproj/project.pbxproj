@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076818911D18CEDC00756A91 /* DYBaseRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 076818901D18CEDC00756A91 /* DYBaseRefreshHeader.m */; };
 		07D1AC421D17DDEE0087C8CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D1AC411D17DDEE0087C8CC /* main.m */; };
 		07D1AC451D17DDEE0087C8CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D1AC441D17DDEE0087C8CC /* AppDelegate.m */; };
 		07D1AC481D17DDEE0087C8CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D1AC471D17DDEE0087C8CC /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0768188F1D18CEDC00756A91 /* DYBaseRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYBaseRefreshHeader.h; sourceTree = "<group>"; };
+		076818901D18CEDC00756A91 /* DYBaseRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYBaseRefreshHeader.m; sourceTree = "<group>"; };
 		07D1AC3D1D17DDEE0087C8CC /* DYRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D1AC411D17DDEE0087C8CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07D1AC431D17DDEE0087C8CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				07D1AC5E1D17FB700087C8CC /* DYRefreshHeader.h */,
 				07D1AC5B1D17E1D40087C8CC /* DYBaseRefreshView.h */,
 				07D1AC5C1D17E1D40087C8CC /* DYBaseRefreshView.m */,
+				0768188F1D18CEDC00756A91 /* DYBaseRefreshHeader.h */,
+				076818901D18CEDC00756A91 /* DYBaseRefreshHeader.m */,
 			);
 			path = DYRefresh;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			files = (
 				07D1AC481D17DDEE0087C8CC /* ViewController.m in Sources */,
 				07D1AC451D17DDEE0087C8CC /* AppDelegate.m in Sources */,
+				076818911D18CEDC00756A91 /* DYBaseRefreshHeader.m in Sources */,
 				07D1AC5A1D17DFA50087C8CC /* UIScrollView+DYRefresh.m in Sources */,
 				07D1AC421D17DDEE0087C8CC /* main.m in Sources */,
 				07D1AC5D1D17E1D40087C8CC /* DYBaseRefreshView.m in Sources */,
@@ -322,6 +328,7 @@
 				07D1AC561D17DDEE0087C8CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

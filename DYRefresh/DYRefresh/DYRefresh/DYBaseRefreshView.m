@@ -13,13 +13,6 @@
 @end
 
 @implementation DYBaseRefreshView
--(instancetype)init{
-    if (self = [super init]) {
-        self.headerRefreshLimit = 50;
-        self.footerRefreshLimit = 50;
-    }
-    return self;
-}
 -(void)willMoveToSuperview:(UIView *)newSuperview{
     [super willMoveToSuperview:newSuperview];
     if (![newSuperview isKindOfClass:[UIScrollView class]]) {
@@ -27,7 +20,7 @@
     }
     if (newSuperview) {
         _scrollView = (UIScrollView *)newSuperview;
-        [_scrollView alwaysBounceVertical];
+        _scrollView.alwaysBounceVertical = YES;
         [self addObservers];
     }
 }
@@ -50,6 +43,10 @@
 }
 -(void)scrollViewContentOffsetDidChange:(NSDictionary *)change{
     
+}
+#pragma mark - setter
+-(void)setRefreshState:(DYRrefreshState)refreshState{
+    _refreshState = refreshState;
 }
 
 @end

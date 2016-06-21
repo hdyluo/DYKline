@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DYBaseRefreshHeader.h"
 @interface UIScrollView (DYRefresh)
-@property(nonatomic,strong) UIView * dy_refreshHeaderView;
+@property(nonatomic,strong) DYBaseRefreshHeader * dy_refreshHeaderView;
 @property(nonatomic,strong) UIView * dy_refreshFooterView;
 @end

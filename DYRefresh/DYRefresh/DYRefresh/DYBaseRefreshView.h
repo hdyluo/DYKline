@@ -23,10 +23,9 @@ typedef NS_ENUM(NSInteger,DYRrefreshState) {
 }
 @property(nonatomic,assign) DYRrefreshState refreshState;
 @property(nonatomic,weak,readonly) UIScrollView * scrollView;
-@property(nonatomic,assign)CGFloat headerRefreshLimit;//下拉时的刷新边界，超过边界刷新，小于边界不刷新。
-@property(nonatomic,assign)CGFloat footerRefreshLimit;
+@property(nonatomic,assign)CGFloat limit;
+
 -(void)beginRefresh;
 -(void)endRefresh;
--(void)autoRefresh;
 -(void)scrollViewContentOffsetDidChange:(NSDictionary *)change;
 @end

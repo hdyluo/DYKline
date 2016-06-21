@@ -9,4 +9,7 @@
 #ifndef DYRefreshHeader_h
 #define DYRefreshHeader_h
 
+#import "UIScrollView+DYRefresh.h"
+#import "DYBaseRefreshHeader.h"
+
 #endif /* DYRefreshHeader_h */

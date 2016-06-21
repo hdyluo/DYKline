@@ -16,7 +16,7 @@
 #define KLINE_OFFSET 60     //起始点距离X轴的距离
 #define SCROLLCONTENT_SIZE_EXTENT 200   //滚动结束，K线距离最右边的距离
 
-#define TOP_MARGIN 100
+#define TOP_MARGIN 10
 #define BOTTOM_MARGIN 100
 
 

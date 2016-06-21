@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DYLongPressToastView : UIView
+@property(nonatomic,assign)BOOL arrowOn;
 -(void)loadWithDate:(NSString *)date price:(NSString *)price;
 @end

@@ -33,7 +33,14 @@
 
 -(void)loadUIWithPoint:(CGPoint) point data:(DYKlineModel *)data{
     CGFloat  dis =(120 - self.frame.size.width) * 0.5;
-    self.toastView.frame = CGRectMake(- dis, point.y - 60, 120, 50);
+    if (point.y - 60 >= 0) {
+        
+        self.toastView.frame = CGRectMake(- dis, point.y - 60, 120, 50);
+        self.toastView.arrowOn = NO;
+    }else{
+        self.toastView.frame = CGRectMake(- dis, point.y + 10, 120, 50);
+        self.toastView.arrowOn = YES;
+    }
     NSInteger value = (NSInteger)data.value;
     [self.toastView loadWithDate:data.date price:[NSString stringWithFormat:@"%ld元",value]];
     [self layoutIfNeeded];

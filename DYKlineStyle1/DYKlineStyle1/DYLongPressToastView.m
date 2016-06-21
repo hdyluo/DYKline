@@ -8,6 +8,7 @@
 
 #import "DYLongPressToastView.h"
 #import "DYCommon.h"
+#define RADIUS 2
 
 @interface DYLongPressToastView()
 @property(nonatomic,strong)CAShapeLayer * bgLayer;
@@ -24,13 +25,17 @@
         [self addSubview:self.priceLabel];
         [self addSubview:self.priceTitleLabel];
         [self addSubview:self.dateLabel];
+        _arrowOn = NO;
     }
     return self;
 }
 -(void)layoutSubviews{
     [super layoutSubviews];
-    self.bgLayer.path = [self creatPath].CGPath;
-    
+    if (self.arrowOn) {
+        self.bgLayer.path = [self createReversePath].CGPath;
+    }else{
+        self.bgLayer.path = [self creatPath].CGPath;
+    }
     self.dateLabel.frame = CGRectMake(5, 3, self.frame.size.width - 6, 20);
     self.priceTitleLabel.frame = CGRectMake(5, 25, 45, 20);
     self.priceLabel.frame = CGRectMake(45, 25, self.frame.size.width - 45, 20);
@@ -54,6 +59,29 @@
     [path addArcWithCenter:CGPointMake(self.frame.size.width - 4, 4) radius:2 startAngle:0 endAngle:-M_PI_2 clockwise:NO];
     [path closePath];
     return path;
+}
+-(UIBezierPath *)createReversePath{
+    UIBezierPath * path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(4, 5)];
+    [path addArcWithCenter:CGPointMake(4, 7) radius:2 startAngle:-M_PI_2 endAngle:-M_PI clockwise:NO];
+    [path addLineToPoint:CGPointMake(2, self.frame.size.height - 4)];
+    [path addArcWithCenter:CGPointMake(4, self.frame.size.height - 4) radius:2 startAngle:M_PI endAngle:M_PI_2 clockwise:NO];
+    [path addLineToPoint:CGPointMake(self.frame.size.width - 4, self.frame.size.height - 2)];
+    [path addArcWithCenter:CGPointMake(self.frame.size.width - 4, self.frame.size.height - 4) radius:2 startAngle:M_PI_2 endAngle:0 clockwise:NO];
+    [path addLineToPoint:CGPointMake(self.frame.size.width - 2, 7)];
+    [path addArcWithCenter:CGPointMake(self.frame.size.width - 4, 7) radius:2 startAngle:0 endAngle:-M_PI_2 clockwise:NO];
+    [path addLineToPoint:CGPointMake(self.frame.size.width * .5 + 2.5, 5)];
+    [path addLineToPoint:CGPointMake(self.frame.size.width * .5, 0)];
+    [path addLineToPoint:CGPointMake(self.frame.size.width *.5 -2.5, 5)];
+    [path closePath];
+    return path;
+}
+#pragma mark - setter
+-(void)setArrowOn:(BOOL)arrowOn{
+    if (_arrowOn != arrowOn) {
+        _arrowOn = arrowOn;
+        [self layoutSubviews];
+    }
 }
 #pragma mark - 初始化
 -(CAShapeLayer *)bgLayer{
